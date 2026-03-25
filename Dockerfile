@@ -6,7 +6,7 @@ COPY package*.json ./
 
 RUN npm install --no-progress
 
-COPY aplikacja.js .
+COPY app.js .
 
 EXPOSE 3000
 

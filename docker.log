@@ -1,0 +1,68 @@
+    1  ls
+    2  mkdir docker-lab
+    3  ls
+    4  cd docker-lab
+    5  nano package.json
+    6  nano app.js
+    7  nano Dockerfile
+    8  ls
+    9  cg docker-lab
+   10  cd docker-lab
+   11  nano Dockerfile
+   12  docker bulid -t lab-app .
+   13  docker build -t lab-app .
+   14  docker run -d -p 80:3000 --name moja-apka lab-app
+   15  nano app.js
+   16  nano Dockerfile
+   17  docker rm -f moja-apka
+   18  docker run -d -p 80:5000 -v "${PWD}:/app" -v /app/node_modules --name apka-dev moja-api:v2 npm run dev
+   19  docker run -d -p 80:5000 -v "${PWD}:/app" -v /app/node_modules --name apka-dev moje-ai:v2 npm run dev
+   20  docker run -d -p 80:5000 -v "${PWD}:/app" -v /app/node_modules --name apka-dev moje-apka:v2 npm run dev
+   21  docker build -t moje-api:v2 .
+   22  docker run -d -p 80:5000 --name api-kontener-v2 moje-api:v2
+   23  docker run -d -p 80:5000 -v "${PWD}:/app" -v /app/node_modules --name apka-dev moje-api:v2 npm run dev
+   24  docker rm -f apka-dev
+   25  docker run -d -p 80:5000 -v "${PWD}:/app" -v /app/node_modules --name apka-dev moje-api:v2 npm run dev
+   26  docer ps
+   27  docker ps
+   28  docker rm -f api-kontener-v2
+   29  docker run -d -p 80:5000 -v "${PWD}:/app" -v /app/node_modules --name apka-dev moje-api:v2 npm run dev
+   30  docker rm -f apka-dev
+   31  docker run -d -p 80:5000 -v "${PWD}:/app" -v /app/node_modules --name apka-dev moje-api:v2 npm run dev
+   32  docker rm -f apka-dev
+   33  docker system prune -f
+   34  docker ps
+   35  docker ps -a
+   36  rm -rf docker-lab
+   37  cd docker-lab
+   38  rm -rf docker-lab
+   39  cd 
+   40  rm -rf docker-lab
+   41  ls
+   42  docker ps
+   43  rm -rf docker-lab
+   44  cd docker-lab
+   45  nano app.js
+   46  rm app.js
+   47  ls
+   48  git clone https://github.com/kasix16/jpai_kartkowka_gr4.git
+   49  git status
+   50  ls
+   51  cd jpai_kartkowka_gr4
+   52  ls
+   53  mv docker Dockerfile
+   54  ls
+   55  dotnet build -t test:v2
+   56  docker build -t test:v2 .
+   57  nano app.js
+   58  nano Dockerfile
+   59  docker build -t test:v2 .
+   60  docker -d -p 4532:3000 --name apka test:v2
+   61  docker run -d -p 4532:3000 --name apka test:v2
+   62  curl -f http://localhost:4532/
+   63  docker rm -f apka
+   64  docker ps
+   65  docker rmi test:v2
+   66  docker image 
+   67  nano docker.log
+   68  history | tee docker.log
